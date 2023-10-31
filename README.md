@@ -1,1 +1,1 @@
-# minigameapp
+# Guess the number mini-game
