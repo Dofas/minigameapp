@@ -19,8 +19,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: 'white',
     textAlign: 'center',
+    // borderWidth: Platform.OS === 'android' ? 0 : 2,
+    // borderWidth: Platform.select({ios: 2, android: 0}),
     borderWidth: 2,
     borderColor: 'white',
     padding: 12,
+    // maxWidth refers to a parent container
+    maxWidth: '80%',
+    width: 300,
   }
 });

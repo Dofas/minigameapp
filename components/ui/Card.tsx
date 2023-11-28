@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { StyleSheet, View } from 'react-native';
+import {Dimensions, StyleSheet, View} from 'react-native';
 import Colors from '../../constants/colors';
 
 interface ICardProps {
@@ -16,11 +16,13 @@ const Card = ({children}: ICardProps) => {
 
 export default Card;
 
+const deviceWidth = Dimensions.get('window').width;
+
 const styles = StyleSheet.create({
   card: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 24,
+    marginTop: deviceWidth < 300 ? 16 : 36,
     marginHorizontal: 24,
     padding: 16,
     backgroundColor: Colors.primary800,
